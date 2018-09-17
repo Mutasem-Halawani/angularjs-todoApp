@@ -25,7 +25,8 @@
           <div ng-show="showEditField">
             <input type="text"
             ng-model="item.title"
-            ng-blur="todo.updateTodo(item, $index); showEditField = false;">
+            ng-blur="todo.updateTodo(item, $index); showEditField = false;"
+            todo-autofocus="showEditField">
           </div>
           <a href="" ng-click="todo.removeTodo(item, $index);">
             &#215;
@@ -47,5 +48,6 @@
   <script src="./js/app.js"></script>
   <script src="./js/todo.controller.js"></script>
   <script src="./js/todo.service.js"></script>
+  <script src="./js/todoAutofocus.directive.js"></script>
   </body>
 </html>
